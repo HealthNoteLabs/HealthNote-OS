@@ -16,8 +16,8 @@
 import pinutils;
 
 info = {
- 'name' : "Bangle.js 2", # Using SMA Q3
- 'link' :  [ "https://espruino.com/Bangle.js2" ],
+ 'name' : "HealthNote Watch", # Formerly Bangle.js 2
+ 'link' :  [ "https://healthnote.watch/help" ],
  'espruino_page_link' : 'Bangle.js2',
  'default_console' : "EV_TERMINAL",
  #'default_console' : "EV_SERIAL1",
@@ -59,7 +59,9 @@ info = {
      'DEFINES += -DSPIFLASH_READ2X', # Read SPI flash at 2x speed using MISO and MOSI for IO
      'DEFINES += -DESPR_JSVAR_FLASH_BUFFER_SIZE=32', # The buffer size we use when executing/iterating over data in flash memory (default 16). Should be set based on benchmarks.
      'DEFINES += -DAPP_TIMER_OP_QUEUE_SIZE=6', # Bangle.js accelerometer poll handler needs something else in queue size
-     'DEFINES+=-DBLUETOOTH_NAME_PREFIX=\'"Bangle.js"\'',
+     'DEFINES+=-DBLUETOOTH_NAME_PREFIX=\'"HealthNote"\'',
+     'DEFINES+=-UJS_VERSION',
+     'DEFINES+=-DJS_VERSION=\'"HEALTHNOTE_OS-0.1"\'',
      'DEFINES+=-DCUSTOM_GETBATTERY=jswrap_banglejs_getBattery',
      'DEFINES+=-DESPR_UNICODE_SUPPORT=1',
      'DEFINES+=-DDUMP_IGNORE_VARIABLES=\'"g\\0"\'',
